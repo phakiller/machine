@@ -1,0 +1,3 @@
+- include: browsers.yml
+- include: image.yml
+- include: spotify.yml

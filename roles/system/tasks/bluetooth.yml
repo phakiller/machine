@@ -1,0 +1,18 @@
+- name: Install bluetooth tools
+  become: yes
+  pacman:
+    name:
+      - bluez
+      - bluez-utils
+      - pulseaudio-bluetooth
+
+- name: Enable and start bluetooth service
+  become: yes
+  systemd: 
+    name: bluetooth
+    enabled: yes
+    state: started
+
+- name: Install GUI front-end
+  become: yes
+  pacman: name=blueman

@@ -1,0 +1,7 @@
+- name: Playbook to install needed softwares and dotfiles (https://github.com/phakiller/dotfiles)
+  hosts: localhost
+  roles:
+    - system
+    - desktop
+    - software-development
+    - applications

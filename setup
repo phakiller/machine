@@ -1,0 +1,31 @@
+#!/bin/bash
+if test ! "$(which python)"; then
+  echo "Installing Python..."
+  sudo pacman -S --noconfirm python
+fi
+
+if test ! "$(which yay)"; then
+  echo "Installing yay..."
+  git clone https://aur.archlinux.org/yay.git && \
+  cd yay && \
+  makepkg -si --noconfirm && \
+  cd .. && \
+  rm -rf yay
+fi
+
+if test ! "$(which ansible)"; then
+  echo "Installing Ansible..."
+  sudo pacman -S --noconfirm ansible
+fi
+
+if test ! -f ./library/yay; then
+  echo "Installing ansible-yay..."
+  sudo curl -fLo ./library/yay --create-dirs https://raw.githubusercontent.com/mnussbaum/ansible-yay/master/yay
+  sudo chmod -R 755 ./library
+fi
+
+echo "Running playbook..."
+
+python --version
+ansible --version
+ansible-playbook -K main.yml

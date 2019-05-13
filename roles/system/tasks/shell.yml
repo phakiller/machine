@@ -1,0 +1,34 @@
+- name: Install ZSH
+  become: yes
+  pacman:
+    name: zsh
+
+- name: Set ZSH as user's shell
+  become: yes
+  shell: chsh -s /bin/zsh phakiller
+
+- name: Install terminal
+  become: yes
+  pacman:
+    name: termite
+
+- name: Check oh-my-zsh installation
+  stat: 
+    path: ~/.oh-my-zsh
+  register: oh_my_zsh
+  changed_when: False
+
+- name: Install oh-my-zsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  when: oh_my_zsh.stat.exists == False
+
+- name: Install Antibody
+  yay:
+    name: antibody
+    state: present
+
+- name: Install ASDF
+  git:
+    repo=https://github.com/asdf-vm/asdf.git
+    dest=~/.asdf
+    version=v0.7.1

@@ -1,0 +1,3 @@
+- name: Install Spotify
+  yay:
+    name: spotify

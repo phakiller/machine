@@ -1,0 +1,4 @@
+- include: app-launcher.yml
+- include: appearance.yml
+- include: file-manager.yml
+- include: windows-manager.yml

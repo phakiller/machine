@@ -1,0 +1,7 @@
+- name: Install intellij ultimate
+  yay: 
+    name: intellij-idea-ultimate-edition
+
+- name: Install datagrip
+  yay: 
+    name: datagrip
