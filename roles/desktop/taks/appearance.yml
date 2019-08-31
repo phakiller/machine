@@ -3,3 +3,15 @@
   pacman:
     name:
       - arc-gtk-theme
+
+- name: Compton
+  become: yes
+  pacman:
+    name:
+      - compton
+
+- name: Dunst
+  become: yes
+  pacman:
+    name:
+      - dunst
