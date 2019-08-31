@@ -5,10 +5,10 @@
       - xorg-server
       - xorg-xinit
 
-- name: Install i3
+- name: Install i3 Gaps
   become: yes
   pacman:
-    name: i3-wm
+    name: i3-gaps
 
 - name: Install status bar
   yay:
