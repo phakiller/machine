@@ -7,7 +7,7 @@
   become: yes
   shell: chsh -s /bin/zsh phakiller
 
-- name: Install terminal
+- name: Install Termite
   become: yes
   pacman:
     name: termite
@@ -21,14 +21,3 @@
 - name: Install oh-my-zsh
   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   when: oh_my_zsh.stat.exists == False
-
-- name: Install Antibody
-  yay:
-    name: antibody
-    state: present
-
-- name: Install ASDF
-  git:
-    repo=https://github.com/asdf-vm/asdf.git
-    dest=~/.asdf
-    version=v0.7.1
