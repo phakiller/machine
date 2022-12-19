@@ -1,0 +1,12 @@
+- name: Install sdkman
+  become: yes
+  shell: curl -s "https://get.sdkman.io" | bash
+
+- name: Install Go
+  become: yes
+  pacman:
+    name: go
+
+- name: Install poetry
+  become: yes
+  shell: curl -sSL https://install.python-poetry.org | python3 -

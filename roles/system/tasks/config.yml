@@ -1,14 +1,14 @@
-- name: Copy etc configuration files
-  become: yes
-  copy: src=etc/ dest=/etc/
+# - name: Copy etc configuration files
+#   become: yes
+#   copy: src=etc/ dest=/etc/
 
-- name: Download dotfiles
-  git:
-    repo=https://github.com/phakiller/dotfiles
-    dest=~/.dotfiles
-    version=master
-    update=yes
-  become: false
-
-- name: Install dotfiles
-  shell: ~/.dotfiles/setup-dotfiles
+#- name: Download dotfiles
+#  git:
+#    repo=https://github.com/phakiller/dotfiles
+#    dest=~/.dotfiles
+#    version=master
+#    update=yes
+#  become: false
+#
+#- name: Install dotfiles
+#  shell: ~/.dotfiles/setup-dotfiles

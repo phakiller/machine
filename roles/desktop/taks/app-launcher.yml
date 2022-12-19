@@ -1,8 +1,0 @@
-- name: Install Rofi
-  become: yes
-  pacman:
-    name: rofi
-
-- name: Install rofi-calc
-  yay:
-    name: rofi-calc

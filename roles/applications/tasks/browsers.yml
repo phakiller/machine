@@ -2,16 +2,7 @@
   yay:
     name: google-chrome
 
-- name: Install Chromium
-  become: yes
-  pacman:
-    name: chromium
-
-- name: Install Firefox
-  become: yes
-  pacman:
-    name: firefox
-
 - name: Install Opera
+  become: yes
   pacman:
     name: opera

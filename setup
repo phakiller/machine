@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if test ! "$(which python)"; then
   echo "Installing Python..."
   sudo pacman -S --noconfirm python

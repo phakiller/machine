@@ -4,7 +4,6 @@
     name:
       - bluez
       - bluez-utils
-      - pulseaudio-bluetooth
 
 - name: Enable and start bluetooth service
   become: yes

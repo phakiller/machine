@@ -1,6 +1,7 @@
 - include: docker.yml
-- include: jdk.yml
+- include: languages-support.yml
 - include: jetbrains.yml
+- include: visual-studio-code.yml
 - include: postman.yml
 - include: typora.yml
-- include: visual-studio-code.yml
+

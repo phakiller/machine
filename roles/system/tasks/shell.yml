@@ -5,12 +5,12 @@
 
 - name: Set ZSH as user's shell
   become: yes
-  shell: chsh -s /bin/zsh phakiller
+  shell: chsh -s /bin/zsh pabloaguilar
 
-- name: Install Termite
+- name: Install Alacritty
   become: yes
   pacman:
-    name: termite
+    name: alacritty
 
 - name: Check oh-my-zsh installation
   stat: 

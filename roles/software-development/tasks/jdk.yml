@@ -1,4 +1,0 @@
-- name: Install openjdk 8
-  become: yes
-  pacman: 
-    name: jdk8-openjdk
